@@ -4,21 +4,37 @@
 
 @layer base {
   @font-face {
-    font-family: "Grotesk";
-    src: url("/fonts/grotesk/SpaceGrotesk-Regular.woff"), format("woff");
+    font-family: "Furore";
+    src: url("/fonts/grotesk/Furore.woff"), format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Grotesk";
-    src: url("/fonts/grotesk/SpaceGrotesk-Medium.woff"), format("woff");
+    font-family: "Helvetica";
+    src: url("/fonts/grotesk/Helvetica.woff"), format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
+  /* Применение шрифтов */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Furore";
+  }
+
+  body,
+  p {
+    font-family: "Helvetica";
+  }
+
+  /* Остальные стили */
   .font-outline {
     -webkit-text-stroke: 2.5px black;
     background-color: transparent;
@@ -35,70 +51,6 @@
     --gray: #f3f3f3;
     --white: #ffffff;
   }
-
-  /* @layer base {
-    * {
-      box-sizing: border-box;
-      font-family: "Grotesk", sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      line-height: 120%;
-      font-weight: 500;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-
-    h4 {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      h1 {
-        font-size: 2.688rem;
-      }
-
-      h2 {
-        font-size: 2.25rem;
-      }
-
-      h3 {
-        font-size: 1.625rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-      }
-    }
-  } */
-
   @layer components {
     .btn-primary {
       @apply bg-dark text-white rounded-lg px-[35px] py-5 transition-all duration-200;
@@ -137,7 +89,7 @@
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 40px;
 }
 
 ::-webkit-scrollbar-track {
@@ -154,12 +106,12 @@
 
 /* markdown style */
 .content p {
-  margin: 20px 0;
+  margin: 40px 0;
   font-size: 1.1rem;
 }
 
 .content h2 {
-  margin: 20px 0;
+  margin: 40px 0;
   font-size: 1.4rem;
   font-weight: bold;
 }
